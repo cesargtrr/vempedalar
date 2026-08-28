@@ -1,0 +1,155 @@
+@import "tailwindcss";
+/* Removed @import "tailwindcss/preflight" to disable CSS reset */
+
+@theme inline {
+  --font-anton: "Anton", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-base-bg: #0c0f08;
+  --color-card-bg: #12160c;
+  --color-earth-brown: #2c1c10;
+  --color-accent-green: #c6ff1e;
+  --color-bone-text: #f2efe2;
+  --color-secondary-text: #c9c6b7;
+  --color-alert-orange: #e0693a;
+}
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* 80px for header */
+  }
+
+  body {
+    background-color: var(--color-base-bg);
+    color: var(--color-bone-text);
+    font-family: var(--font-inter);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :root {
+    --acid: #c6ff1e;
+    --dirt-dark: #2c1c10;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-anton);
+    line-height: 1.1;
+  }
+
+  .font-label {
+    font-family: var(--font-oswald);
+  }
+
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.tagline-bar {
+  margin-top: 22px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.55);
+  border-left: 7px solid #c6ff1e;
+  padding: 10px 18px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: clamp(13px, 2vw, 17px);
+  text-transform: uppercase;
+}
+
+.hero-sub {
+  margin-top: 28px;
+  max-width: 480px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 3px;
+}
+
+.hero-sub strong {
+  color: #c6ff1e;
+  font-weight: 700;
+}
+
+.hero-actions {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 24px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #c9c6b7;
+  font-size: 14px;
+}
+
+.hero-meta b {
+  display: block;
+  color: #c6ff1e;
+  font-weight: 700;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #c6ff1e;
+  color: #0c0f08;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.125rem;
+  font-style: italic;
+  text-transform: uppercase;
+  padding: 0.875rem 1.875rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+@utility diagonal-cut {
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@utility animate-infinite-scroll {
+  animation: infinite-scroll 20s linear infinite;
+}
+
+/* Explicit sizing avoids arbitrary responsive utilities being omitted from the generated CSS. */
+
+@layer utilities {
+  .custom-border {
+    border-style: solid;
+    border-width: 1px;
+  }
+}
+
+
