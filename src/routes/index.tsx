@@ -105,7 +105,7 @@ function Index() {
 
           <div className="mt-0 pt-2 border-t border-white/10 w-full">
             <div className="grid grid-cols-3 gap-2 w-full text-xs md:text-sm hero-meta">
-              <div><b>Data</b>18.10.26</div>
+              <div><b>Data</b>08.11.26</div>
               <div><b>Local</b>Trilha do Arraial</div>
               <div><b>Vagas</b>Limitadas</div>
             </div>
@@ -306,7 +306,7 @@ function Index() {
         </div>
         <div className="container mx-auto px-6 text-center relative z-10 flex justify-center items-center">
           <div className="inline-block border-2 md:border-4 border-[#0c0f08] px-6 py-2 md:px-12 md:py-4 transform -rotate-1 bg-[#c6ff1e]">
-            <h2 className="text-3xl md:text-6xl font-anton text-[#0c0f08] uppercase italic leading-none">18.10.2026!</h2>
+            <h2 className="text-3xl md:text-6xl font-anton text-[#0c0f08] uppercase italic leading-none">08.11.2026!</h2>
             <p className="font-oswald text-xs md:text-xl font-bold text-[#0c0f08] uppercase tracking-[0.2em] md:tracking-[0.3em] mt-0.5 md:mt-1 italic">» Fique ligado «</p>
           </div>
         </div>
